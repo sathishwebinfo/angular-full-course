@@ -12,6 +12,9 @@ import { TaskOneComponent } from './task-one/task-one.component';
 import { AngularDirectiveComponent } from './angular-directive/angular-directive.component';
 import { TaskTwoComponent } from './task-two/task-two.component';
 import { AngularPipeComponent } from './angular-pipe/angular-pipe.component';
+import { AppendPipe } from './pipes/append.pipe';
+import { AppendCLIPipe } from './pipes/append-cli.pipe';
+import { SummaryPipe } from './pipes/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { AngularPipeComponent } from './angular-pipe/angular-pipe.component';
     TaskOneComponent,
     AngularDirectiveComponent,
     TaskTwoComponent,
-    AngularPipeComponent
+    AngularPipeComponent,
+    AppendPipe,
+    AppendCLIPipe,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
