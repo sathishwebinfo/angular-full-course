@@ -7,6 +7,9 @@ import { LeftbarComponent } from './leftbar/leftbar.component';
 import { RightbarComponent } from './rightbar/rightbar.component';
 import { PostTimelineComponent } from './post-timeline/post-timeline.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { FormsModule } from '@angular/forms';
+import { TaskOneComponent } from './task-one/task-one.component';
+import { AngularDirectiveComponent } from './angular-directive/angular-directive.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { PostListComponent } from './post-list/post-list.component';
     LeftbarComponent,
     RightbarComponent,
     PostTimelineComponent,
-    PostListComponent
+    PostListComponent,
+    TaskOneComponent,
+    AngularDirectiveComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

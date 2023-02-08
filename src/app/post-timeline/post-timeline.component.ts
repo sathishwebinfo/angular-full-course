@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-post-timeline',
@@ -7,12 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class PostTimelineComponent implements OnInit {
-  
-timelinePost : string ="Message from timelinepost";
-childpost : string = "message from child";
+
+  messageTlComp: string = "Message coming from PostTimelineComponent";
+  childTlcomp: string = "Message coming from Child PostTimelineComponent";
+  outputTLcomp: string = "Message coming from Child PostTimelineComponent Via Output";
+
+  @Input() fromAppParentCom: string;
+
+  @Output() messageEvent = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
-  }
 
+  }
+  sendMessage() {
+    this.messageEvent.emit(this.outputTLcomp);
+
+  }
 }

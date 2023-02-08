@@ -1,5 +1,32 @@
-<h1>Welcome to Angular Full Course</h1>
-<app-leftbar [fromParent] = 'parentMessage'></app-leftbar>
-<app-post-timeline></app-post-timeline>
-<app-rightbar></app-rightbar>
-<h2>{{message}}sdfsd</h2>
+<!-- <h1>Welcome to Angular Full Course</h1>
+<app-post-timeline [fromAppParentCom]="parentMessage" (messageEvent)="receiveMessage($event)"></app-post-timeline>
+<h2>{{childMessageView}}</h2>
+<h3>{{fromChildOutput}}</h3>
+<app-rightbar></app-rightbar> -->
+
+<!-- String Interpolation -->
+<!-- <img src="{{imgURL}}" alt=""> -->
+
+<!-- Property Binding -->
+<!-- <img [src]="imgURL" alt=""> -->
+
+<!-- CLass Binding -->
+<!-- <h1 class="red-color">Learning Angular</h1>
+<h1 [class.red-color]="bool">Learning Angular</h1> -->
+
+<!-- Style Binding -->
+<!-- <h1 [style.border]="bool? '1px solid red':'1px solid blue'">Learning Angular</h1> -->
+
+<!-- Event Binding -->
+<!-- <button>Click Me</button> -->
+
+<!-- Event Filering -->
+<!-- <input type="text" (keyup)="onKeyup($event)"> Javascript Method -->
+<!-- <input type="text" (keyup.enter)="onKeyup($event)"> Angular Method -->
+<!-- <input type="text" (keyup.enter)="onKeyup(username.value)" #username> Angular Method -->
+<!-- <input type="text" [value]="textValue" (keyup.enter)="onKeyup()">
+<br/>
+<input type="text" [(ngModel)]="textValue" (keyup.enter)="onKeyup()">
+{{textValue}} -->
+<!-- <app-task-one></app-task-one> -->
+<app-angular-directive></app-angular-directive>

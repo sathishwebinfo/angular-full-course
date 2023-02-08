@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-leftbar',
@@ -8,7 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class LeftbarComponent implements OnInit {
   
-  @Input() fromParent!: string;
 
   constructor() { }
 
