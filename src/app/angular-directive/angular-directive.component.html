@@ -1,4 +1,6 @@
-<!-- <p>{{postArray}}</p>
+<h1 [ngStyle]="{color:isActive? 'green':'grey'}">Directives</h1>
+<h2 [ngClass]="isActive? 'head':'tail'">Directives Class</h2>
+<p>{{postArray}}</p>
 <ul>
     <li>{{postArray[0]}}</li>
     <li>{{postArray[1]}}</li>
@@ -8,16 +10,16 @@
 </ul>
 <ul>
     <li *ngFor="let post of postArray">{{post}}</li>
-</ul> -->
-<!-- <h1>Fetching object Array</h1>
-<button (click)="addNew()">Add New</button> -->
-<!-- <ul>
-    <li *ngFor="let post of objArray; let i = index">{{i}}{{post.postTitle}} 
+</ul>
+<h1>Fetching object Array</h1>
+<button (click)="addNew()">Add New</button>
+<ul>
+    <li *ngFor="let post of objArray; let i = index">{{i+1}}{{post.postTitle}}
         <button (click)="onDelete(post)">Delete</button>
     </li>
-</ul> -->
-<!-- <div *ngIf="objArray.length > 0; then postList else noData">
-   
+</ul>
+<div *ngIf="objArray.length > 0; then postList else noData">
+
 </div>
 <ng-template #postList>
     <ul>
@@ -28,7 +30,22 @@
 </ng-template>
 <ng-template #noData>
     <div>No Data</div>
-</ng-template> -->
-<!-- <div *ngIf="objArray.length == 0">
-    No Data
-</div> -->
+</ng-template>
+
+<div>
+    <button (click)="onClick('step-1')">Step 1</button>
+    <button (click)="onClick('step-2')">Step 2</button>
+    <button (click)="onClick('step-3')">Step 3</button>
+    <button (click)="onClick('step-4')">Step 4</button>
+</div>
+<div *ngIf="stepForm == 'step-1'">Step 1 Form</div>
+<div *ngIf="stepForm == 'step-2'">Step 2 Form</div>
+<div *ngIf="stepForm == 'step-3'">Step 3 Form</div>
+<div *ngIf="stepForm == 'step-4'">Step 4 Form</div>
+<div [ngSwitch]="stepForm">
+    <div *ngSwitchCase="'step-1'">Step 1 Form</div>
+    <div *ngSwitchCase="'step-2'">Step 2 Form</div>
+    <div *ngSwitchCase="'step-3'">Step 3 Form</div>
+    <div *ngSwitchCase="'step-4'">Step 4 Form</div>
+    <div *ngSwitchDefault>Something Else</div>
+</div>

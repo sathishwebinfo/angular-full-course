@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./angular-directive.component.scss']
 })
 export class AngularDirectiveComponent implements OnInit {
+  isActive: boolean = false;
   postArray: Array<string> = ['post 1', 'post 2', 'post 3', 'post 4', 'post 5'];
+  stepForm: string = "step-1";
   objArray: Array<any> = [
     { id: 1, postTitle: 'Post 1' },
     { id: 2, postTitle: 'Post 2' },
@@ -26,7 +28,10 @@ export class AngularDirectiveComponent implements OnInit {
   addNew() {
     this.objArray.push({ id: 6, postTitle: 'post 6' });
   }
-  onDelete(index){
+  onDelete(index) {
     this.objArray.splice(index, 1);
+  }
+  onClick(status) {
+    this.stepForm = status;
   }
 }

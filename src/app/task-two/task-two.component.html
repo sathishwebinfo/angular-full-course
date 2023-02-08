@@ -1,0 +1,29 @@
+<div>
+    <h1>User Details</h1> <br>
+    <input type="text" [(ngModel)]="fName" > <br>
+    <input type="text" [(ngModel)]="Email" > <br>
+    <textarea [(ngModel)]="Address" cols="30" rows="10"></textarea> <br>
+    <button (click)="onSubmit()" >Submit</button>
+</div>
+<div *ngIf="userArray.length > 0; else noData">
+    <table>
+        <tr>
+            <th>SLNo</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let user of userArray; let i=index;">
+            <td>{{i+1}}</td>
+            <td>{{user.Name}}</td>
+            <td>{{user.Email}}</td>
+            <td>{{user.Address}}</td>
+            <td><button (click)="onDelete(i)">Delete</button></td>
+        </tr>
+    </table>
+</div>
+<ng-template #noData>
+    No Data
+</ng-template>
+

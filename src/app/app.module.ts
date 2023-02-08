@@ -10,6 +10,8 @@ import { PostListComponent } from './post-list/post-list.component';
 import { FormsModule } from '@angular/forms';
 import { TaskOneComponent } from './task-one/task-one.component';
 import { AngularDirectiveComponent } from './angular-directive/angular-directive.component';
+import { TaskTwoComponent } from './task-two/task-two.component';
+import { AngularPipeComponent } from './angular-pipe/angular-pipe.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AngularDirectiveComponent } from './angular-directive/angular-directive
     PostTimelineComponent,
     PostListComponent,
     TaskOneComponent,
-    AngularDirectiveComponent
+    AngularDirectiveComponent,
+    TaskTwoComponent,
+    AngularPipeComponent
   ],
   imports: [
     BrowserModule,
