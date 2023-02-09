@@ -9,7 +9,7 @@ import { PostTimelineComponent } from './post-timeline/post-timeline.component';
 })
 export class AppComponent implements AfterViewInit {
   title = 'angular-full-course';
-  parentMessage: string = "Message coming from App Parent Component changed";
+  parentMessage: string = "Message coming from App Parent Component changed :)";
   childMessageView: string;
   fromChildOutput: string;
   // @ViewChild(PostTimelineComponent) childPostTimelineComponent;

@@ -1,9 +1,9 @@
 <div>
     <h1>User Details</h1> <br>
-    <input type="text" [(ngModel)]="fName" > <br>
-    <input type="text" [(ngModel)]="Email" > <br>
+    <input type="text" [(ngModel)]="fName"> <br>
+    <input type="text" [(ngModel)]="Email"> <br>
     <textarea [(ngModel)]="Address" cols="30" rows="10"></textarea> <br>
-    <button (click)="onSubmit()" >Submit</button>
+    <button (click)="onSubmit()">Submit</button>
 </div>
 <div *ngIf="userArray.length > 0; else noData">
     <table>
@@ -26,4 +26,3 @@
 <ng-template #noData>
     No Data
 </ng-template>
-
