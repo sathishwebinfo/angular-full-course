@@ -17,6 +17,8 @@ import { AppendCLIPipe } from './pipes/append-cli.pipe';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { AngularServicesComponent } from './angular-services/angular-services.component';
 import { PostService } from './services/post.service';
+import { AngularTemplateDrivenFormComponent } from './angular-template-driven-form/angular-template-driven-form.component';
+import { AngularReactiveFormComponent } from './angular-reactive-form/angular-reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { PostService } from './services/post.service';
     AppendPipe,
     AppendCLIPipe,
     SummaryPipe,
-    AngularServicesComponent
+    AngularServicesComponent,
+    AngularTemplateDrivenFormComponent,
+    AngularReactiveFormComponent
   ],
   imports: [
     BrowserModule,
